@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.verdianople.com/dnd/5.0/ac.schema.json",
+  "title": "Armor Class",
+  "description": "Represents how difficult a creature is to hit. Different values represent different situations (for example, a different piece of amor).",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ac": "number",
+      "from": {
+        "description": "An optional list of sources, such as 'natural armor' or 'leather armor, shield'.",
+        "type": "array",
+        "items": "string"
+      }
+    }
+  }
+}

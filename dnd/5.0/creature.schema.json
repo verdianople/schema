@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.verdianople.com/dnd/5.0/creature.schema.json",
+  "title": "Creature",
+  "description": "Basic creature, which can be applied to NPCs or PCs.",
+  "type": "object",
+  "properties": {
+    "ac": {
+      "title": "Armor Class",
+      "description": "Numeric value used to determine how difficult this creature is to hit with an attack.",
+      "$ref": "https://schema.verdianople.com/dnd/5.0/ac.schema.json"
+    },
+    "actions": {
+      "title": "Actions",
+      "description": "Things that this creature can do with its action on its turn. Does not include 'special' actions like lair, legendary, or villain actions.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "An individual action.",
+        "$ref": "https://schema.verdianople.com/dnd/5.0/action.schema.json"
+      }
+    }
+  }
+}
