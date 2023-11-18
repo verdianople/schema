@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "https://schema.verdianople.com/dnd/5e/v1/condition.schema.json",
   "title": "Condition",
   "description": "A condition that can affect a creature, either positively or negatively.",

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "https://schema.verdianople.com/dnd/5e/v1/stat.schema.json",
   "title": "Stat",
   "description": "One of the core primary stats used for creatures.",

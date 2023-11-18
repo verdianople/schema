@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "https://schema.verdianople.com/dnd/5e/v1/creature.schema.json",
   "title": "Creature",
   "description": "Basic creature, which can be applied to NPCs or PCs.",
