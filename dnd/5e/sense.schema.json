@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://schema.verdianople.com/dnd/5e/v1/sense.schema.json",
+    "title": "Sense",
+    "description": "A way in which this creature can percieve things.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "What this sense is called.",
+            "type": "string",
+            "enum": ["blindsight", "darkvision", "tremorsense", "truesight"]
+        },
+        "distance": {
+            "description": "How far, in feet, this sense can reach.",
+            "type": "integer",
+            "min": 0
+        },
+        "note": {
+            "type": "string",
+            "description": "Additional context, i.e. 'blind beyond this distance'."
+        }
+    },
+    "required": ["name", "distance"]
+}

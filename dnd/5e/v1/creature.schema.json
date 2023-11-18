@@ -33,16 +33,50 @@
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
       }
     },
+    "condition_immunity": {
+      "title": "Condition Immunity",
+      "description": "Conditions to which this creature is immune, meaning that they cannot recieve these conditions.",
+      "type": "array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/condition.schema.json"
+      }
+    },
     "cr": {
       "title": "Challenge Rating",
       "description": "A number that represents how much of a challenge a creature will present.",
       "type": "number"
     },
+    "damage_immunity": {
+      "title": "Damage Immunity",
+      "description": "Damage types to which this creature is immune, meaning they will take no damage.",
+      "type":"array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/damage.schema.json"
+      }
+    },
+    "damage_resistance": {
+      "title": "Damage Reistance",
+      "description": "Damage types to which this resistant, meaning that it will take half damage.",
+      "type":"array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/damage.schema.json"
+      }
+    },
+    "damage_vulnerability": {
+      "title": "Damage Vulnerability",
+      "description": "Damage types to which this vulnerable, meaning that it will take double damage.",
+      "type":"array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/damage.schema.json"
+      }
+    },
     "environment": {
       "title": "Environment",
       "description": "Where this creature may be found.",
       "type": "array",
-      "items": {"type": "string"},
+      "items": {
+        "type": "string"
+      },
       "minItems": 1
     },
     "hp": {
@@ -56,15 +90,201 @@
       "description": "The formula for deriving how many hit points a creature has. Also used for other things, like healing when resting.",
       "$ref": "https://schema.verdianople.com/dnd/5e/v1/roll.schema.json"
     },
+    "language": {
+      "title": "Lanugage",
+      "description": "Any languages the creature knows.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lair_actions": {
+      "title": "Lair Actions",
+      "description": "Special actions that powerful creatures can take when in the area defined as their lair.",
+      "type":"array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
+      }
+    },
+    "legendary_actions": {
+      "title": "Legendary Actions",
+      "description": "Special actions that powerful creatures can take.",
+      "type":"array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
+      }
+    },
+    "name": {
+      "title": "Name",
+      "description": "The name of this creature or creature type.",
+      "type": "string"
+    },
+    "proficiency_bonus": {
+      "name": "Proficiency Bonus",
+      "description": "A value that modifies most roles, largely based on the level or challenge of the creature.",
+      "$ref": "https://schema.verdianople.com/dnd/5e/v1/mod.schema.json"
+    },
+    "reactions": {
+      "title": "Reactions",
+      "description": "Actions that can consume the reaction phase of a creatures turn.",
+      "type":"array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
+      }
+    },
+    "role": {
+      "name": "Role",
+      "description": "The role this creature is intended to take in combat.",
+      "type": "string"
+    },
+    "senses": {
+      "title": "Senses",
+      "description": "Any special senses the creature poseses.",
+      "type": "array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/sense.schema.json"
+      }
+    },
+    "size": {
+      "title": "Size",
+      "description": "The size category into which this creature falls.",
+      "type": "string",
+      "enum": ["microsopic", "tiny", "small", "medium", "large", "huge", "gargantuan", "inconceivable"],
+      "default": "medium"
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "Skills that this creature has access to. Generally this defines only skills in which this creature is trained or proficient.",
+      "type": "array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/skill.schema.json"
+      }
+    },
+    "speed": {
+      "title": "speed",
+      "description": "How quickly a creature can move, in feet.",
+      "type": "object",
+      "properties": {
+        "walk": {
+          "type": "integer",
+          "min": 0
+        },
+        "climb": {
+          "type": "integer",
+          "min": 0
+        },
+        "swim": {
+          "type": "integer",
+          "min": 0
+        },
+        "fly": {
+          "type": "integer",
+          "min": 0
+        },
+        "jump": {
+          "type": "integer",
+          "min": 0
+        }
+      },
+      "required": ["walk"]
+    },
+    "source": {
+      "title": "Source",
+      "description": "What source material this creature is drawn from.",
+      "type":"object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "page": {
+          "oneOf": [
+            {"type": "integer"},
+            {"type": "string", "format": "uri"}
+          ]
+        }
+      },
+      "required": ["name"]
+    },
     "stats": {
-      "strength": {
-        "allOf":[{"$ref": "https://schema.verdianople.com/dnd/5e/v1/stat.schema.json"}],
-        "properties": {
-          "name": {
-            "const": "str"
+      "title": "Stats",
+      "description": "The creature's core statistics.",
+      "type": "object",
+      "properties": {
+        "str": {
+          "type": "integer",
+          "default": 10,
+          "min": 0
+        },
+        "dex": {
+          "type": "integer",
+          "default": 10,
+          "min": 0
+        },
+        "con": {
+          "type": "integer",
+          "default": 10,
+          "min": 0
+        },
+        "int": {
+          "type": "integer",
+          "default": 10,
+          "min": 0
+        },
+        "wis": {
+          "type": "integer",
+          "default": 10,
+          "min": 0
+        },
+        "cha": {
+          "type": "integer",
+          "default": 10,
+          "min": 0
+        }
+      },
+      "required": [
+        "str",
+        "dex",
+        "con",
+        "int",
+        "wis",
+        "cha"
+      ]
+    },
+    "type": {
+      "name": "Type",
+      "description": "The general type this creature is, i.e. humanoid, undead, plant, etc.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Primary type.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "Other arbitrary tags to expand on the type.",
+          "type": "array",
+          "items": {
+            "type":"string",
+            "uniqueItems": true
           }
         }
-      }
+      },
+      "required": ["name"]
+    },
+    "villain_actions": {
+      "name": "Villian Actions",
+      "type": "array",
+      "prefixItems": [
+        {"$ref": "https://schema.verdianople.com/dnd/5e/v1/villain-action.schema.json"},
+        {"$ref": "https://schema.verdianople.com/dnd/5e/v1/villain-action.schema.json"},
+        {"$ref": "https://schema.verdianople.com/dnd/5e/v1/villain-action.schema.json"}
+      ],
+      "items": false
     }
-  }
+  },
+  "required": [
+    "stats",
+    "name",
+    "hp",
+    "ac"
+  ]
 }
