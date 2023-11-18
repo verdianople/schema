@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/damage.schema.json",
+  "title": "Damage",
+  "description": "The type of damage dealt by an attack or other effect.",
+  "type": "string",
+  "enum": ["acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"]
+}

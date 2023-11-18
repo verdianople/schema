@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schema.verdianople.com/dnd/5.0/roll.schema.json",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/roll.schema.json",
   "title": "Roll",
   "description": "A formula for a dice roll.",
   "type": "object",
@@ -8,14 +8,14 @@
     "dice": {
       "type": "array",
       "items": {
-        "$ref": "https://schema.verdianople.com/dnd/5.0/die.schema.json"
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/die.schema.json"
       },
       "minItems": 1
     },
     "mods": {
       "type": "array",
       "items": {
-        "$ref": "https://schema.verdianople.com/dnd/5.0/mod.schema.json"
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/mod.schema.json"
       }
     }
   },

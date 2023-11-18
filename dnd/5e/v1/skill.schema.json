@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/condition.schema.json",
+  "title": "Skill",
+  "description": "Represents this creatures ability to accomplish a task within a certain domain.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "What this skill is called.",
+      "type": "string"
+    },
+    "modifier": {
+      "description": "The value to apply to rolls made against this skill.",
+      "$ref": "https://schema.verdianople.com/dnd/5e/v1/mod.schema.json",
+      "default": {
+        "sign": "+",
+        "value": 0
+      }
+    },
+    "stat": {
+      "description": "The stat associated with this skill. Usually only one, but some skills can be rolls against different stats.",
+      "type": "array",
+      "items": {
+        ""
+      }
+    },
+    "passive": {
+      "description": "The value for this skill that can be compared to a challenge DC without rolling. Usually 10 + mod, but sometimes modified other ways.",
+      "type": "integer"
+    },
+    "proficient": {
+      "description": "Is the creature trained or otherwise proficient in the use of this skill?",
+      "type": "boolean"
+    }
+  },
+  "required": ["name"]
+}

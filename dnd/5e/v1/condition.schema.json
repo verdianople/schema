@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/condition.schema.json",
+  "title": "Condition",
+  "description": "A condition that can affect a creature, either positively or negatively.",
+  "type": "string",
+  "enum": ["blinded", "charmed", "deafened", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "poisoned", "petrified", "prone", "restrained", "stunned", "unconscious", "dazed"]
+}

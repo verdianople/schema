@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schema.verdianople.com/dnd/5.0/ac.schema.json",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/ac.schema.json",
   "title": "Armor Class",
   "description": "Represents how difficult a creature is to hit. Different values represent different situations (for example, a different piece of amor).",
   "type": "array",

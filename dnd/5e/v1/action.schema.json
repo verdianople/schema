@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schema.verdianople.com/dnd/5.0/action.schema.json",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json",
   "title": "Action",
   "description": "An individual thing that a creature can do.",
   "type": "object",

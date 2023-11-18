@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schema.verdianople.com/dnd/5.0/creature.schema.json",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/creature.schema.json",
   "title": "Creature",
   "description": "Basic creature, which can be applied to NPCs or PCs.",
   "type": "object",
@@ -8,7 +8,7 @@
     "ac": {
       "title": "Armor Class",
       "description": "Numeric value used to determine how difficult this creature is to hit with an attack.",
-      "$ref": "https://schema.verdianople.com/dnd/5.0/ac.schema.json"
+      "$ref": "https://schema.verdianople.com/dnd/5e/v1/ac.schema.json"
     },
     "actions": {
       "title": "Actions",
@@ -16,13 +16,13 @@
       "type": "array",
       "items": {
         "description": "An individual action.",
-        "$ref": "https://schema.verdianople.com/dnd/5.0/action.schema.json"
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
       }
     },
     "alignment": {
       "title": "Alignment",
       "description": "Represents the creature's outlook on morality and order.",
-      "$ref": "https://schema.verdianople.com/dnd/5.0/action.schema.json"
+      "$ref": "https://schema.verdianople.com/dnd/5e/v1/alignment.schema.json"
     },
     "bonus_actions": {
       "title": "Bonus Actions",
@@ -30,7 +30,7 @@
       "type": "array",
       "items": {
         "description": "An individual action.",
-        "$ref": "https://schema.verdianople.com/dnd/5.0/action.schema.json"
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
       }
     },
     "cr": {
@@ -49,12 +49,17 @@
       "title": "Hit Points",
       "description": "Representation of the average health of a creature of this type.",
       "type": "integer",
-      "min": "0"
+      "min": 0
     },
     "hit_dice": {
       "title": "Hit Dice",
       "description": "The formula for deriving how many hit points a creature has. Also used for other things, like healing when resting.",
-      "$ref": "https://schema.verdianople.com/dnd/5.0/roll.schema.json"
+      "$ref": "https://schema.verdianople.com/dnd/5e/v1/roll.schema.json"
+    },
+    "stats": {
+      "strength": {
+
+      }
     }
   }
 }

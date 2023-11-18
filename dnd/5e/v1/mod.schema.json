@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schema.verdianople.com/dnd/5.0/mod.schema.json",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/mod.schema.json",
   "title": "Modifier",
   "description": "A number and a sign that are applied to another number (usually a die role).",
   "type": "object",

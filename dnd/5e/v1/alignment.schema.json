@@ -1,10 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schema.verdianople.com/dnd/5.0/alignment.schema.json",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/alignment.schema.json",
   "title": "Alignment",
   "description": "The creatures view (if any) on morality and order.",
   "oneOf": [
-    {"const": "unaligned"},
+    {
+      "type": "string",
+      "const": "unaligned"
+    },
     {
       "type": "object",
       "properties": {
