@@ -7,7 +7,7 @@
   "items": {
     "type": "object",
     "properties": {
-      "ac": "number",
+      "ac": {"type": "integer"},
       "from": {
         "description": "An optional list of sources, such as 'natural armor' or 'leather armor, shield'.",
         "type": "array",

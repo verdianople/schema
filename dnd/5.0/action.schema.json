@@ -1,3 +1,15 @@
 {
-
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.verdianople.com/dnd/5.0/action.schema.json",
+  "title": "Action",
+  "description": "An individual thing that a creature can do.",
+  "type": "object",
+  "properties": {
+    "name": "string",
+    "type": {
+      "description": "i.e. 'Melee Attack'"
+    },
+    "text": "string"
+  },
+  "required": ["name","text"]
 }

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.verdianople.com/dnd/5.0/roll.schema.json",
+  "title": "Roll",
+  "description": "A formula for a dice roll.",
+  "type": "object",
+  "properties": {
+    "dice": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5.0/die.schema.json"
+      },
+      "minItems": 1
+    },
+    "mods": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5.0/mod.schema.json"
+      }
+    }
+  },
+  "required": ["dice"]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.verdianople.com/dnd/5.0/die.schema.json",
+  "title": "Die",
+  "description": "Represents a die type, or set set of the same type.",
+  "type": "object",
+  "properties": {
+    "sides": {
+      "description": "Number of sides this die has.",
+      "type": "number",
+      "enum": [2, 4, 6, 8, 10, 12, 20, 100]
+    },
+    "number": {
+      "description": "How many of this die to roll.",
+      "type": "number",
+      "minimum": 1,
+      "default": 1
+    }
+  },
+  "required": ["sides"]
+}

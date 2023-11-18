@@ -15,10 +15,46 @@
       "description": "Things that this creature can do with its action on its turn. Does not include 'special' actions like lair, legendary, or villain actions.",
       "type": "array",
       "items": {
-        "type": "object",
         "description": "An individual action.",
         "$ref": "https://schema.verdianople.com/dnd/5.0/action.schema.json"
       }
+    },
+    "alignment": {
+      "title": "Alignment",
+      "description": "Represents the creature's outlook on morality and order.",
+      "$ref": "https://schema.verdianople.com/dnd/5.0/action.schema.json"
+    },
+    "bonus_actions": {
+      "title": "Bonus Actions",
+      "description": "Actions that consume the 'bonus' action phase during a creature's turn.",
+      "type": "array",
+      "items": {
+        "description": "An individual action.",
+        "$ref": "https://schema.verdianople.com/dnd/5.0/action.schema.json"
+      }
+    },
+    "cr": {
+      "title": "Challenge Rating",
+      "description": "A number that represents how much of a challenge a creature will present.",
+      "type": "number"
+    },
+    "environment": {
+      "title": "Environment",
+      "description": "Where this creature may be found.",
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "hp": {
+      "title": "Hit Points",
+      "description": "Representation of the average health of a creature of this type.",
+      "type": "integer",
+      "min": "0"
+    },
+    "hit_dice": {
+      "title": "Hit Dice",
+      "description": "The formula for deriving how many hit points a creature has. Also used for other things, like healing when resting.",
+      "$ref": "https://schema.verdianople.com/dnd/5.0/roll.schema.json"
     }
   }
 }
