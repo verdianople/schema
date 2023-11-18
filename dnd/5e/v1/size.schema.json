@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.verdianople.com/dnd/5e/v1/size.schema.json",
+  "title": "Size",
+  "description": "The size category into which this creature falls.",
+  "type": "string",
+  "enum": ["microscopic", "tiny", "small", "medium", "large", "huge", "gargantuan", "inconceivable"],
+  "default": "medium"
+}

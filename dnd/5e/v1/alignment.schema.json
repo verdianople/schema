@@ -19,7 +19,8 @@
           "type": "string",
           "enum": ["evil", "neutral", "good"]
         }
-      }
+      },
+      "required": ["order","moral"]
     }
   ]
 }

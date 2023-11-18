@@ -4,8 +4,11 @@
   "title": "Villain Action",
   "description": "A special kind of action from the 'Flee, Mortals!' 3rd-party expansion. Villain actions are done in order, and each can be used only once.",
   "allOf":[{"$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"}],
-  "order": {
-    "type": "number",
-    "enum": [1, 2, 3]
-  }
+  "properties": {
+    "order": {
+      "type": "number",
+      "enum": [1, 2, 3]
+    }
+  },
+  "required": ["order"]
 }

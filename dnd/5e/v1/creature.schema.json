@@ -17,7 +17,8 @@
       "items": {
         "description": "An individual action.",
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "alignment": {
       "title": "Alignment",
@@ -31,7 +32,8 @@
       "items": {
         "description": "An individual action.",
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "condition_immunity": {
       "title": "Condition Immunity",
@@ -39,12 +41,15 @@
       "type": "array",
       "items": {
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/condition.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "cr": {
       "title": "Challenge Rating",
       "description": "A number that represents how much of a challenge a creature will present.",
-      "type": "number"
+      "$comment": "Challenge ratings are usually fractional below 1, but since JSON doesn't understand fractions we're using decimals.",
+      "type": "number",
+      "minimum": 0.125
     },
     "damage_immunity": {
       "title": "Damage Immunity",
@@ -52,15 +57,17 @@
       "type":"array",
       "items": {
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/damage.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "damage_resistance": {
-      "title": "Damage Reistance",
+      "title": "Damage Resistance",
       "description": "Damage types to which this resistant, meaning that it will take half damage.",
       "type":"array",
       "items": {
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/damage.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "damage_vulnerability": {
       "title": "Damage Vulnerability",
@@ -68,7 +75,8 @@
       "type":"array",
       "items": {
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/damage.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "environment": {
       "title": "Environment",
@@ -96,7 +104,8 @@
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "minItems": 1
     },
     "lair_actions": {
       "title": "Lair Actions",
@@ -104,7 +113,8 @@
       "type":"array",
       "items": {
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "legendary_actions": {
       "title": "Legendary Actions",
@@ -112,7 +122,8 @@
       "type":"array",
       "items": {
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "name": {
       "title": "Name",
@@ -130,7 +141,8 @@
       "type":"array",
       "items": {
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/action.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "role": {
       "name": "Role",
@@ -143,14 +155,17 @@
       "type": "array",
       "items": {
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/sense.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "size": {
       "title": "Size",
-      "description": "The size category into which this creature falls.",
-      "type": "string",
-      "enum": ["microsopic", "tiny", "small", "medium", "large", "huge", "gargantuan", "inconceivable"],
-      "default": "medium"
+      "description": "The size category of this creature. Generally creatures have only one size, but some can change size.",
+      "type": "array",
+      "items": {
+        "$ref": "https://schema.verdianople.com/dnd/5e/v1/size.schema.json"
+      },
+      "minItems": 1
     },
     "skills": {
       "title": "Skills",
@@ -158,7 +173,8 @@
       "type": "array",
       "items": {
         "$ref": "https://schema.verdianople.com/dnd/5e/v1/skill.schema.json"
-      }
+      },
+      "minItems": 1
     },
     "speed": {
       "title": "speed",

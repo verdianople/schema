@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "https://schema.verdianople.com/dnd/5e/v1/sense.schema.json",
     "title": "Sense",
-    "description": "A way in which this creature can percieve things.",
+    "description": "A way in which this creature can perceive things.",
     "type": "object",
     "properties": {
         "name": {

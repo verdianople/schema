@@ -5,11 +5,12 @@
   "description": "An individual thing that a creature can do.",
   "type": "object",
   "properties": {
-    "name": "string",
+    "name": {"type": "string"},
     "type": {
-      "description": "i.e. 'Melee Attack'"
+      "description": "i.e. 'Melee Attack'",
+      "type": "string"
     },
-    "text": "string"
+    "text": {"type": "string"}
   },
   "required": ["name","text"]
 }

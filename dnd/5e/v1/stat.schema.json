@@ -15,8 +15,9 @@
       "default": 10
     },
     "mod": {
-      "description": "Modifier based on the state score, but sometimes modified additionally by other sources.",
+      "description": "Modifier based on the stat score, but sometimes modified additionally by other sources.",
       "$ref": "https://schema.verdianople.com/dnd/5e/v1/mod.schema.json"
     }
-  }
+  },
+  "required": ["name", "score", "mod"]
 }
