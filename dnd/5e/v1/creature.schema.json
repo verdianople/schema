@@ -266,6 +266,19 @@
         "cha"
       ]
     },
+    "traits": {
+      "title": "Traits",
+      "description": "Abilities or capabilities inherent to the creature.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"}
+        },
+        "required": ["name", "description"]
+      }
+    },
     "type": {
       "name": "Type",
       "description": "The general type this creature is, i.e. humanoid, undead, plant, etc.",
