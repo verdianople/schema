@@ -1,5 +1,5 @@
 {
-  "name": "schema",
+  "name": "@verdianople/schema",
   "version": "1.0.0",
   "description": "Schemas for Verdianople tools.",
   "main": "index.js",
@@ -12,5 +12,5 @@
   "bugs": {
     "url": "https://github.com/verdianople/schema/issues"
   },
-  "homepage": "https://schema.verdianople.com"
+  "homepage": "https://schema.verdianople.com/schemas.json"
 }
